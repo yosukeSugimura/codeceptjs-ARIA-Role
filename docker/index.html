@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ARIAロール拡張例</title>
+</head>
+<body>
+
+  <!-- ページのヘッダー -->
+  <header role="banner">
+    <h1>ウェブサイトのタイトル</h1>
+    <nav role="navigation">
+      <ul>
+        <li><a href="#">ホーム</a></li>
+        <li><a href="#">ニュース</a></li>
+        <li><a href="#">連絡先</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- メインコンテンツエリア -->
+  <div role="main">
+    <section role="region">
+      <h2>記事のセクション</h2>
+      <div>
+        <article role="article">
+          <h3>記事のタイトル</h3>
+          <p>記事の内容です。ここには有益な情報が含まれています。</p>
+          <!-- ボタンを追加 -->
+          <button role="button" aria-label="もっと詳しく">詳細を見る</button>
+        </article>
+      </div>
+    </section>
+
+    <section role="region">
+      <h2>別のセクション</h2>
+      <div>
+        <p>このセクションには、別の種類の情報が含まれています。</p>
+        <!-- アクションを促すボタン -->
+        <button role="button" aria-label="今すぐ登録">登録</button>
+      </div>
+    </section>
+  </div>
+
+  <!-- サイドバー -->
+  <aside role="complementary">
+    <h2>関連情報</h2>
+    <p>記事の内容に関連する追加情報がここに表示されます。</p>
+  </aside>
+
+  <form role="form" aria-labelledby="formTitle">
+    <fieldset>
+      <legend id="formTitle">お問い合わせフォーム</legend>
+  
+      <!-- テキスト入力 -->
+      <div>
+        <label for="name">名前:</label>
+        <input type="text" id="name" name="name" aria-required="true">
+      </div>
+  
+      <!-- Eメール入力 -->
+      <div>
+        <label for="email">Eメール:</label>
+        <input type="email" id="email" name="email" aria-required="true">
+      </div>
+  
+      <!-- セレクトメニュー -->
+      <div>
+        <label for="inquiryType">問い合わせ種類:</label>
+        <select id="inquiryType" name="inquiryType" aria-required="true">
+          <option value="">選択してください</option>
+          <option value="product">商品について</option>
+          <option value="support">サポート</option>
+          <option value="general">一般的な問い合わせ</option>
+        </select>
+      </div>
+  
+      <!-- ラジオボタン -->
+    <div role="radiogroup" aria-labelledby="genderTitle">
+      <p id="genderTitle">性別:</p>
+      <label for="male">男性</label>
+      <input type="radio" id="male" name="gender" value="male">
+      <label for="female">女性</label>
+      <input type="radio" id="female" name="gender" value="female">
+    </div>
+
+    <!-- チェックボックス -->
+    <div aria-labelledby="newsletterLabel">
+      <p id="newsletterLabel">ニュースレターを受け取る:</p>
+      <label for="subscribe">
+        <input type="checkbox" id="subscribeYes" name="subscribe" value="yes"> はい
+        <input type="checkbox" id="subscribeNo" name="subscribe" value="no"> いいえ
+      </label>
+    </div>
+
+      <!-- テキストエリア -->
+      <div>
+        <label for="message">メッセージ:</label>
+        <textarea id="message" name="message" rows="5" aria-required="true"></textarea>
+      </div>
+  
+      <!-- 提出ボタン -->
+      <div>
+        <button type="submit">送信</button>
+      </div>
+  
+    </fieldset>
+  </form>
+
+  <!-- ページのフッター -->
+  <footer role="contentinfo">
+    <p>&copy; 2024 あなたのサイト名</p>
+  </footer>
+
+</body>
+</html>

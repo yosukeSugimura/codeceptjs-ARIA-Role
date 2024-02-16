@@ -1,0 +1,11 @@
+# ベースイメージ
+FROM nginx:alpine
+
+# HTMLファイルをコピー
+COPY index.html /usr/share/nginx/html/index.html
+
+# ファイルの所有権を変更
+RUN chown nginx:nginx /usr/share/nginx/html/index.html
+
+# nginxの起動
+CMD ["nginx", "-g", "daemon off;"]
